@@ -73,7 +73,7 @@ snap => {
   //  console.log(id)
     }
 
-    const editbtn = async (id, Title) => {
+    const editbtn = async (id) => {
       removeblog();
       const inputTitle = document.querySelector('input');
       const inputSummary = document.querySelector('#summary');
