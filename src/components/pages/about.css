@@ -1,0 +1,36 @@
+.Intro{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.432), rgba(0, 5, 5, 0.7)),url('../../../public/images/church2.jpg');
+    height: 50vh;
+    width: 100%;
+    background-position:unset ;
+    background-size:cover ;
+    background-repeat: no-repeat;
+}
+.Intro h1{
+    margin-top: 0;
+    margin-left: 30px;
+    padding-top: 7rem;
+}
+.Intro p{
+    margin-left: 30px;
+}
+.Information h2{
+    color: black;
+    margin-top: 4rem;
+    margin-left: 30px;
+}
+hr{
+    height: 3px;
+    border: none;
+    background-color: black;
+}
+.Information p{
+    color: black;
+    margin: 30px;
+}
+pre{
+    color: black;
+}
+li{
+    color: black;
+}
