@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <link rel="icon" href="images/winners_logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description"  content="Web site created using create-react-app"
+    />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7fa6d5fe14.js" crossorigin="anonymous"></script>
+    <title>Winners Church Ikorodu</title>
+  </head>
+  <body>
+    <style>
+      body{
+        overflow-x: hidden;
+        user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+      .loader{
+        min-height: 100vh;
+        min-width: 100%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .loader img{
+        width:100px;
+        height:50px;
+        animation: scale 1.5s infinite ease-in-out;
+      }
+      .loader p{
+        animation: up 1.5s infinite ease-in-out ;
+        margin-top: 10rem;
+        font-size: 24px;
+      }
+      @keyframes scale {
+        0%{
+          transform: scale(0);
+        }
+        50%{
+          transform: scale(.5);
+        }
+        100%{
+          opacity: 0.5;
+          transform: scale(1);
+        }
+      }
+      @keyframes up {
+        0%{
+          opacity: 0;
+        } 
+        50%{
+          opacity: .5;
+          margin-top: -5rem;
+
+        }
+        100%{
+          margin-top: -5rem;
+          opacity: 1;
+        }
+      }
+    </style>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="loader">
+        <img src="images/winners_logo.png" alt="">
+        <p> Winners Church Ikorodu</p>
+      </div>
+    </div>
+  </body>
+</html>
