@@ -1,0 +1,40 @@
+.hero-container{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.432), rgba(0, 5, 5, 0.7)),url('../../public/images/church1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    margin-top: -3.4rem;
+    overflow-y: hidden;
+}
+.heroText{
+    padding-top: 6rem;
+}
+.heroText h1{
+    padding-top: 2rem;
+    text-align: center;
+    color: red;
+    font-size: 45px;
+    font-family: 'Dosis', sans-serif;
+}
+@media screen and (max-width: 960px){
+    .hero-container h1{
+        font-size: 38px;
+    font-family: 'Dosis', sans-serif;
+        /* margin-top: -150px; */
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero-container h1{
+        font-size: 33px;
+    font-family: 'Dosis', sans-serif;
+    }
+}
+@media screen and (max-width: 450px) {
+    .hero-container h1{
+        font-size: 20px;
+    }
+
+}
+

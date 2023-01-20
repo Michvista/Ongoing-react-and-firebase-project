@@ -1,0 +1,125 @@
+ * .cards{
+    font-family: 'Poppins';
+ }
+ .cards{
+    padding: 4rem;
+    background: white;
+ }
+ .cards h1{
+    text-align: center;
+    color: red;
+    font-size: 45px;
+    color: black;   
+}
+.cards_container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 1120px;
+    width: 90%;
+    margin: 0 auto;
+}
+.cards_wrapper{
+    position: relative;
+    margin: 50px 0 45px;
+}
+.cards_items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cards_item,
+.cards_item-moon{
+    display: flex;
+    flex: 1;
+    margin: 0 1rem;
+    border-radius: 3px;
+    /* border: 1px solid black; */
+    min-height: 40vh;
+    min-width: 50%;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    transition: all .5s ease-in-out;
+}
+.cards_item:hover{
+    /* background: red;; */
+    background:rgba(255, 255, 0, 0.527) ;
+    /* transition: all .2s ease-in-out; */
+}
+.cards_item-moon:hover{
+    background: rgba(0, 0, 139, 0.534);
+}
+.cards_item_link{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.411);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.411));
+    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.411));
+    border-radius: 5px;
+    overflow: hidden;
+    text-decoration: none;
+}
+.card_item_svg figcaption{
+    position: relative;
+    top: 3.6rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.cards_item_ing{
+    display: flex;
+    padding-left: 40%;
+    width: 50px;
+    height: 50px;
+    transition: all .2s ease-in-out;
+}
+.card_item_svg i{
+    font-size: 50px;
+    color: black;
+    display: flex;
+    padding-left: 40%;
+    transition: all .2s ease-in-out;
+    text-align: center;
+}
+/* .cards_item_info{
+    padding: 20px 30px 30px;
+    background: black;
+} */
+.cards_item_info .cards_item_text{
+    color: #252e48;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 40px;
+}
+.cards_item_ing:hover,
+i:hover{
+    transform: scale(1.1);
+}
+@media screen and (max-width:960px) {
+    .cards_items{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 500px) {
+    .cards_item,
+    .cards_item-moon{
+        min-width: 60%;
+    }
+    .cards_item_text{
+        padding: 10px;
+    }
+    /* .cards_container{
+        max-width: 8rem;
+    } */
+}
+@media screen and (max-width:1500px) {
+    .cards_item,
+    .cards_item-moon{
+        min-width: 45%;
+    }
+}
