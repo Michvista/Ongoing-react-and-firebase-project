@@ -152,7 +152,7 @@ snap => {
          
               {blogs.map((blog) => {
             return ( 
-              <button className='edit_blog' onClick={()=>  {editbtn(blogs.id, blogs.Title)}}
+              <button className='edit_blog' onClick={()=>  {editbtn(blog.id, blog.Title)}}
               > Edit Blog </button> 
              );
              })} 
