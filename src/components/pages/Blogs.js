@@ -80,7 +80,7 @@ snap => {
       const content = document.querySelector('textarea');
       // const 88
       const blogsers = doc(db, 'blogs', id)
-      const updated = {Title: inputTitle.value}
+      const updated = {Title: inputTitle.value, Summary: inputSummary.value, Content: content.value}
       await updateDoc(blogsers, updated)
     console.log(id);
     };
@@ -152,7 +152,7 @@ snap => {
          
               {blogs.map((blog) => {
             return ( 
-              <button className='edit_blog' onClick={()=>  {editbtn(blog.id, blog.Title)}}
+              <button className='edit_blog' onClick={()=>  {editbtn(blog.id, blog.Title, blog.Summary, blog.Content)}}
               > Edit Blog </button> 
              );
              })} 
