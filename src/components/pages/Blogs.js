@@ -19,7 +19,7 @@ export default function Blogs() {
 
   useEffect(() => {
     snappy()
-  }, [])
+  }, []) 
 
 const snappy = 
 onSnapshot(query(collection(db, 'blogs')),
@@ -150,12 +150,12 @@ snap => {
               </select>
               <button className='add_blog' onClick={addbtnblogs}> Add Blog </button>
          
-              {/* {blogs.map((blog) => {
-            return ( */}
+              {blogs.map((blog) => {
+            return ( 
               <button className='edit_blog' onClick={()=>  {editbtn(blogs.id, blogs.Title)}}
               > Edit Blog </button> 
-            {/* //   );
-            // })} */}
+             );
+             })} 
             </div>
           </div>
         </div>
