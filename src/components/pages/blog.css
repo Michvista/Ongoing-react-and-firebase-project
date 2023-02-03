@@ -1,5 +1,4 @@
 .blogs-page{
-    /* background:black; */
     display: flex;
     flex-direction: column;
 }
