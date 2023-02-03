@@ -1,6 +1,6 @@
 .blogs-page{
     /* background:black; */
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 .blogs-page h1{
