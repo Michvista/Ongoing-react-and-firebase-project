@@ -202,7 +202,7 @@ onChange={e=>setNewContent(e.target.value)}
 <h1>{blog.Title}</h1>
 <p>{blog.Summary}</p>
 <div className="blog-post-actions">
-<button onClick={()=>setEditingBlog(blog)} className='edit' onMouseOver={addblog}> 
+<button onClick={()=>setEditingBlog(blog)} className='edit'> 
 <i className='fa-solid fa-pen-to-square edit'> <span> Edit </span> </i> </button>
 <button onClick={()=>deleteBlog(blog.id)}> 
 <i className='fa-solid fa-trash delete'> <span> Delete </span> </i></button>
