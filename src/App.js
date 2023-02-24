@@ -14,7 +14,8 @@ import About from './components/pages/About';
 import Blogs from './components/pages/Blogs';
 import Give from './components/pages/Give';
 import Contact from './components/pages/Contact';
-
+import Readmore from './components/pages/Readmore';
+import SignupPage from './components/pages/SignupPage';
 
 import {
   Route,
@@ -34,6 +35,8 @@ function App() {
             <Route path='/Blogs' element= {<Blogs/>} />
             <Route path='/Give' element= {<Give/>} />
             <Route path='/Contact' element= {<Contact/>} />
+            <Route path='/blog' element= {<Readmore/>} />
+            <Route path='/sign-up' element= {<SignupPage/>} />
           </Routes>
       </div>
   </>
