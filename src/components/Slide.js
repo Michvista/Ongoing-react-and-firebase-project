@@ -11,7 +11,7 @@ function Slide  () {
         return (
           <div
             className={className}
-            style={{ ...style, display: "block", background: "black" }}
+            style={{ ...style, display: "block"}}
             onClick={onClick}
           />
         );
@@ -22,7 +22,7 @@ function Slide  () {
         return (
           <div
             className={className}
-            style={{ ...style, display: "block", background: "black" }}
+            style={{ ...style, display: "block" }}
             onClick={onClick}
           />
         );
@@ -41,20 +41,20 @@ function Slide  () {
           prevArrow: <SamplePrevArrow />,
           pauseOnHover: true,
           appendDots: dots => (
-            <div style = {{
-                backgroundColor: '#fff',
-                borderRadius : '10px',
-                width: '500px',
-                padding : '10px',
-                
-                // marginTop : '40px',
-                // position : 'relative',
-                // left: '1rem'
-            }}
-            >
-                <ul style={{margin:'0px'}} > {dots} </ul>
+            <div>
+                <ul style={{margin:'0px', color:'white'}} className='slick-dots'> {dots} </ul>
             </div>
           ),
+          // customPaging: w => (
+          //       <div
+          //       style={{
+          //         color: 'white',
+          //         opacity: '.25'
+          //       }}
+          //       >
+          //         {w + '•' }
+          //       </div>
+          // ),
         responsive: [
           {
             breakpoint: 1024,

@@ -32,6 +32,18 @@
 .slick-list{
     margin: 0 -10px;
 }
+.slick-dots li button:before
+{
+    color:white;
+}
+.slick-dots li button
+{
+    color:white;
+}
+.slick-dots li.slick-active button:before
+{
+    color:white;
+}
 @media screen and (max-width:960px) {
     .apps{
         width: 800px;

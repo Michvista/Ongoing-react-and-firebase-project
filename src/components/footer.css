@@ -15,6 +15,7 @@
     margin-bottom: 24px;
     padding: 24px;
     color: white;
+    width:70%;
 }
 .footer-paragraph{
     font-size: 24px;
@@ -28,6 +29,7 @@
     margin-bottom: 16px;
     border: 1px solid white;
     color: black;
+    width:60%;
 }
 .footer-textarea{
     padding: 8px 20px;
@@ -38,12 +40,12 @@
     margin-bottom: 16px;
     border: 1px solid white;
     color: black;
-    display:flex ;
-    flex-direction: column;
     height: 30vh;
-    width: 30%;
+    width: 60%;
+    resize:none;
 }
 .footer-input-name{
+    width:60%;
     padding: 8px 20px;
     border-radius: 2px;
     outline: none;
@@ -62,6 +64,7 @@
     margin-bottom: 16px;
     border: 1px solid white;
     color: black;
+    width:60%;
 }
 .texty{
     display: flex;
@@ -72,7 +75,7 @@
     text-align: center;
     margin: .5rem auto;
     border-radius: 4px;
-    width: 40%;
+    width: 65%;
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
@@ -80,6 +83,7 @@
     padding: 14px 20px;
     border: 1px solid white;
     transition: all .3s ease-out;
+    cursor:pointer;
 }
 .submit-btn:hover{
     background: white;
@@ -153,7 +157,6 @@ i:hover{
     }
     .footer-textarea{
         width: 90%;
-        margin-left: .5rem;
     }
     .footer-input-subject{
         width: 90%;
@@ -174,14 +177,14 @@ i:hover{
     }
     .footer-link-wrapper{
         /* width: 5rem; */
-        margin-left: 3rem;
+        /* margin-left: 3rem; */
         flex-direction: column;
     }
     .submit-btn{
-        width: 108%;
+        width: 100%;
     }
     .footer-input{
-        width: 85%;
+        width: 90%;
     }
     /* .footer-textarea{
         margin-left: 0;

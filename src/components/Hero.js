@@ -33,7 +33,7 @@ function Hero () {
       <div className='hero-container'>
         <div className='heroText'>
     <Slide/>
-  <h1> WELCOME TO WINNERS <br/> CHURCH IKORODU</h1>
+  <h1> WELCOME TO WINNERS <br/> CHURCH IKORODU </h1>
   </div>
   </div>
     </>

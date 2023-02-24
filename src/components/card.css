@@ -108,7 +108,7 @@ i:hover{
 @media screen and (max-width: 500px) {
     .cards_item,
     .cards_item-moon{
-        min-width: 60%;
+        min-width:100%;
     }
     .cards_item_text{
         padding: 10px;

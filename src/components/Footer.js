@@ -66,7 +66,7 @@ function Footer() {
       <section className='social-media'>
         <div className='social-media-wrapper'>
           <small className='footer.logo-copyright'>
-            Winners © 2022
+            Winners © 2023
           </small>
           <div className='social-icons'>
             <a className='facebook' 
