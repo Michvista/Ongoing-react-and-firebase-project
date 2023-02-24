@@ -237,23 +237,23 @@
     background-size:cover ;
     background-repeat: no-repeat;
 }
-.blog h1,
-.blog h6{
+.blog-post h1,
+.blog-post h6{
     color: white;
 }
-.blog h1{
+.blog-post h1{
     text-align: center;
 }
-.blog h6{
+.blog-post h6{
     align-self: flex-start;
     margin-left: 15px;
 }
-.blog p{
+.blog-post p{
 text-align: center;
     color: white;
     width: 250px;
 }
-.blog h6{
+.blog-post h6{
     padding-right: 30px;
 }
 .bottom{
@@ -262,7 +262,7 @@ text-align: center;
     /* position: relative; */
     /* top: 5rem; */
 }
-.blog .btn-blog{
+.blog-post .btn-blog{
     color: white;
     cursor: pointer;
     outline: none;
