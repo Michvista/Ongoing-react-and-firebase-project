@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react'
 //import{useRef,useEffect}from"react";
+import {Link} from 'react-router-dom';
 import './blog.css'
 import {db} from './firebase-config.js'
 import {collection,addDoc,updateDoc,deleteDoc,doc,onSnapshot,query} from 'firebase/firestore'
@@ -22,13 +23,13 @@ return () => unsubscribe();
 
 //click to call the pop up form on the first page
 function addblog(e) {
-  const popup_box = document.querySelector('.pop-up_box');
-  popup_box.classList.add('show');
+  const popup_box = document.querySelector('.pop-up_box');
+  popup_box.classList.add('show');
 }
 //remove pop up form
 function removeblog() {
-  const popup_box = document.querySelector('.pop-up_box');
-  popup_box.classList.remove('show');
+  const popup_box = document.querySelector('.pop-up_box');
+  popup_box.classList.remove('show');
 }
 
 const createBlog = async() => {
@@ -45,9 +46,9 @@ removeblog();
 
 const updateBlog = async(id,Title,Summary,Content)=>{
 await updateDoc(doc(db,'blogs',id),{
-Title,
-Summary,
-Content
+  Title:newTitle,
+  Summary:newSummary,
+  Content:newContent 
 });
 setEditingBlog(null);
 removeblog();
@@ -58,15 +59,15 @@ await deleteDoc(blogRef);
 };
 // const editbtnBlog = document.querySelector('.edit');
 // editbtnBlog.addEventListener('click', () => {
-//   addblog();
+//   addblog();
 // });
 // setEditingBlog(){
-//   const editbtnBlog = document.querySelector('.edit');
+//   const editbtnBlog = document.querySelector('.edit');
 // editbtnBlog.addEventListener('click', () => {
-//   addblog();
+//   addblog();
 // });
 // }
-  // document.querySelector('.edit').addEventListener('click', addblog());
+  // document.querySelector('.edit').addEventListener('click', addblog());
 
 return(
 <div className="blogs-page">
@@ -75,47 +76,47 @@ return(
 </header>
 <div className='categories-container'>
 <div className='categories'>
-          <div className='cat Hospitality'>
-            <h6>  Hospitality</h6>
-          </div>
-          <div className='cat Security'>
-            <h6>  Security</h6>
-          </div>
-          <div className='cat Protocol'>
-            <h6>  Protocol</h6>
-          </div>
-          <div className='cat Sanctuary'>
-            <h6>  Sanctuary</h6>
-          </div>
-          <div className='cat Media'>
-            <h6> Media </h6>
-          </div>
-          <div className='cat Choir'>
-            <h6>  Choir </h6>
-          </div>
-          <div className='cat Evangelism'>
-            <h6>  Evangelism </h6>
-          </div>
-          <div className='cat Usher'>
-            <h6>  Ushering </h6>
-          </div>
-          <div className='cat All'>
-            <h6>  All </h6>
-          </div>
-        </div>
+          <div className='cat Hospitality'>
+            <h6>  Hospitality</h6>
+          </div>
+          <div className='cat Security'>
+            <h6>  Security</h6>
+          </div>
+          <div className='cat Protocol'>
+            <h6>  Protocol</h6>
+          </div>
+          <div className='cat Sanctuary'>
+            <h6>  Sanctuary</h6>
+          </div>
+          <div className='cat Media'>
+            <h6> Media </h6>
+          </div>
+          <div className='cat Choir'>
+            <h6>  Choir </h6>
+          </div>
+          <div className='cat Evangelism'>
+            <h6>  Evangelism </h6>
+          </div>
+          <div className='cat Usher'>
+            <h6>  Ushering </h6>
+          </div>
+          <div className='cat All'>
+            <h6>  All </h6>
+          </div>
+        </div>
 
-  <button className='add' onClick={addblog}>Add Blog</button>
+  <button className='add' onClick={addblog}>Add Blog</button>
 </div>
 <main>
 {editingBlog ? (
 <>
-      <div className='pop-up_box'>
-        <div className='pop-up'>
-          <div className='content'>
-          <header>
-              <p> Edit Your Blog</p>
-              <i className='fas fa-times' onClick={removeblog}></i>
-            </header>
+      <div className='pop-up_box'>
+        <div className='pop-up'>
+          <div className='content'>
+          <header>
+              <p> Edit Your Blog</p>
+              <i className='fas fa-times' onClick={removeblog}></i>
+            </header>
 <form className='form-blog-container'>
 <input
 type="text"
@@ -134,9 +135,9 @@ placeholder='Content'
 value={newContent}
 onChange={e=>setNewContent(e.target.value)}
 />
-<label for="background_img"> Choose an image as your background:  </label>
-              <input type="file" name="background_img" id="1" accept=".png, .jpg, .jpeg" required />
-              <br />
+<label for="background_img"> Choose an image as your background:  </label>
+              <input type="file" name="background_img" id="1" accept=".png, .jpg, .jpeg" required />
+              <br />
 <button onClick={()=>updateBlog(editingBlog.id,newTitle,newSummary,newContent)} className='add_blog'
 > Edit Blog
 </button>
@@ -149,12 +150,12 @@ onChange={e=>setNewContent(e.target.value)}
 ) : (
 <>
 <div className='pop-up_box'>
-        <div className='pop-up'>
-          <div className='content'>
-          <header>
-              <p> Add a New Blog</p>
-              <i className='fas fa-times' onClick={removeblog}></i>
-            </header>
+        <div className='pop-up'>
+          <div className='content'>
+          <header>
+              <p> Add a New Blog</p>
+              <i className='fas fa-times' onClick={removeblog}></i>
+            </header>
 <form className='form-blog-container'>
 <input
 type="text"
@@ -174,20 +175,20 @@ value={newContent}
 onChange={e=>setNewContent(e.target.value)}
 />
 <br />
-              <label for="background_img"> Choose an image as your background:  </label>
-              <input type="file" name="background_img" id="1" accept=".png, .jpg, .jpeg" required />
-              <br />
-              <label for='church_cartegories'> Choose your category: </label>
-              <select name="church_cartegories" id="church_cartegories">
-                <option value="Hospitality"> Hospitality </option>
-                <option value="Security"> Security </option>
-                <option value="Protocol"> Protocol </option>
-                <option value="Sanctuary"> Sanctuary </option>
-                <option value="Media"> Media </option>
-                <option value="Choir"> Choir </option>
-                <option value="Evangelism"> Evangelism </option>
-                <option value="Ushering"> Ushering </option>
-              </select>
+              <label for="background_img"> Choose an image as your background:  </label>
+              <input type="file" name="background_img" id="1" accept=".png, .jpg, .jpeg" required />
+              <br />
+              <label for='church_cartegories'> Choose your category: </label>
+              <select name="church_cartegories" id="church_cartegories">
+                <option value="Hospitality"> Hospitality </option>
+                <option value="Security"> Security </option>
+                <option value="Protocol"> Protocol </option>
+                <option value="Sanctuary"> Sanctuary </option>
+                <option value="Media"> Media </option>
+                <option value="Choir"> Choir </option>
+                <option value="Evangelism"> Evangelism </option>
+                <option value="Ushering"> Ushering </option>
+              </select>
 
 <button onClick={createBlog} className='add_blog'>AddBlog</button>
 </form>
@@ -202,12 +203,21 @@ onChange={e=>setNewContent(e.target.value)}
 <h1>{blog.Title}</h1>
 <p>{blog.Summary}</p>
 <div className="blog-post-actions">
-<button onClick={()=>setEditingBlog(blog)} className='edit'> 
+<button onClick = {  () => {
+  setEditingBlog(blog)
+  addblog()
+}
+} 
+className='edit'> 
 <i className='fa-solid fa-pen-to-square edit'> <span> Edit </span> </i> </button>
 <button onClick={()=>deleteBlog(blog.id)}> 
 <i className='fa-solid fa-trash delete'> <span> Delete </span> </i></button>
 </div>
-<button className='btn-blog'> Read more</button>
+<button className='btn-blog' onClick={blog.id}>
+<Link to ='/blog' className='link'>
+                        Read More
+ </Link>
+</button>
 </div>
 ))}
 </div>
@@ -215,4 +225,3 @@ onChange={e=>setNewContent(e.target.value)}
 </div>
 );
 }
-  
