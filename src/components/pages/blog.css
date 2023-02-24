@@ -292,6 +292,9 @@ text-align: center;
     display:flex;
     padding-top: 5px;
 }
+.blog-post-actions i {
+    color:white;
+}
 .blog-post-actions button{
     margin-left: 10px;
     list-style: none;
